@@ -1,47 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@1,300&display=swap');
 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
-    
 }
 
-body{
-    /* background-color: #f1f1f1; */
-    background: linear-gradient(45deg);
+
+body {
+    background: linear-gradient(45deg, #0a0a0a, #3a4453);
+    margin: 0; 
+    min-height: 100vh; 
+    
 }
-.calculatorbody{
+    
+
+.calculatorbody {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
     height: 500px;
-}
-         
-table {
-    background-color: #fff;
-    box-shadow: rgb(red, green, blue) 0px 10px 50px ;
-    border: 2px solid;
+   
 }
 
-td {
+table {
+    box-shadow: 0px 3px 15px rgba(113,115,119,0.5);
+    border: 2px solid #717377;
+}
+
+td{
     text-align: center;
     color: #fff1;
-    border: 2px solid black;
+   
 }
 
-input[type="button"]{
+input[type="button"] {
     width: 90px;
     height: 80px;
-    color: #fff;
-    background-color: black;
-    font-size: 2rem;
+    color: #ffffff;
+   background: transparent;
+    font-size: 25px;
     border: none;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.048);
     cursor: pointer;
-    transition: 0.2s ease-in-out;
-    outline: none !important;
-    border: none !important;
     border-radius: 50%;
+}
+
+input[type="button"]:active {
+    transform: scale(0.95);
+}
+
+
+
+.answercolor{
+    background-color: rgba(255, 99, 71, 0.527);
+    border-radius: 60%;
+}
+
+input[type="text"]{
+ width: 300%;
+ border: none;
+ padding: 25px;
+ margin: 10px;
+ background: transparent;
+ color: #fff;
+ font-size: 20px;
+    
+    
+
+}
+
+input.operator{
+    color: #6dee0a;
+}
+
+input::placeholder{
+    color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+    .calculatorbody {
+        width: 90%;
+        height: auto;
+    }
+}
+
